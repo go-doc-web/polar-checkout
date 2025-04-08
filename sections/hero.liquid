@@ -1,0 +1,45 @@
+{{ 'section-hero.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+  {
+    "name": "Hero Section",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Create your own winter look?"
+      }, {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle",
+        "default": "Choose one product in each section and get 20% on the whole bundle"
+      }, {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text",
+        "default": "START"
+      }, {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero Section"
+      }
+    ]
+  }
+{% endschema %}
+
+<section class="hero-section" style="background-image: url({{section.settings.background_image | image_url}});">
+  <div class="container hero-container">
+    <h1 class="title-hero">{{ section.settings.title }}</h1>
+    <p class="subtitle-hero">{{ section.settings.subtitle }}</p>
+    <button id="start-button" class='btn hero-btn primery'>
+      {{ section.settings.button_text }}
+    </button>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "title": "Create your own winter look?",
+        "subtitle": "Choose one product in each section and get 20% on the whole bundle",
+        "button_text": "START",
+        "background_image": "shopify://shop_images/hero_bg.jpg"
+      }
+    },
+    "build_4ArAGp": {
+      "type": "build",
+      "blocks": {
+        "step_izMi7z": {
+          "type": "step",
+          "settings": {
+            "title": "Step 1",
+            "subtitle": "Select snowboard",
+            "background": "#F3FCFF",
+            "product_list": ["twin-flying-v", "clash", "trickstick-amptek"]
+          }
+        },
+        "step_fhkNYr": {
+          "type": "step",
+          "settings": {
+            "title": "Step",
+            "subtitle": "Select jacket",
+            "background": "#ffffff",
+            "product_list": ["dunmore", "greed-jacket", "la"]
+          }
+        },
+        "step_WJjtej": {
+          "type": "step",
+          "settings": {
+            "title": "Step 3",
+            "subtitle": "Select helmet",
+            "background": "#F3FCFF",
+            "product_list": ["undefeated-talan", "rime", "lynx"]
+          }
+        }
+      },
+      "block_order": ["step_izMi7z", "step_fhkNYr", "step_WJjtej"],
+      "settings": {}
+    }
+  },
+  "order": ["hero", "build_4ArAGp"]
+}

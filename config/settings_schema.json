@@ -1,0 +1,58 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "polar_checkout",
+    "theme_version": "1.0.0",
+    "theme_author": "hubsky",
+    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
+    "theme_support_url": "https://support.shopify.com/"
+  },
+  {
+    "name": "Theme settings",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "logo"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "font_picker",
+        "id": "heading_font",
+        "label": "Heading font",
+        "default": "helvetica_n4"
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon"
+      },
+      {
+        "type": "text",
+        "id": "seo_description",
+        "label": " Meta Description"
+      },
+      {
+        "type": "text",
+        "id": "seo_keywords",
+        "label": "Meta Keywords"
+      },
+      {
+        "type": "text",
+        "id": "seo_author",
+        "label": "Author"
+      },
+      {
+        "type": "color",
+        "id": "theme_color",
+        "label": "theme-color",
+        "default": "#ffffff"
+      }
+    ]
+  }
+]

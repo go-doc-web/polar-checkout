@@ -1,0 +1,127 @@
+#build,
+.build-section {
+  scroll-margin-top: 110px;
+}
+
+.build-section {
+  padding-top: 50px;
+  padding-bottom: 79px;
+  background: var(--build-bg);
+  height: auto;
+}
+
+.build-container {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.build-title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--title-color);
+  text-align: center;
+}
+
+.build-subtitle {
+  margin-top: 33px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--subtitle-color);
+  text-align: center;
+}
+
+.products-list {
+  margin-top: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.product-card {
+  width: 300px;
+  border: 1px solid var(--product-card-border);
+  background: var(--product-bg);
+  transition: all 0.3s ease;
+}
+
+.product-card.selected {
+  transform: scale(1.05);
+  border: 1px solid var(--accent-border);
+  transition: all 0.3s ease;
+}
+
+.thumb {
+  padding: 15px 0;
+  width: 100%;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #e2e2e2;
+  background: #fff;
+}
+
+.thumb img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 19px 0 29px;
+  background-color: var(--card-content);
+}
+
+.card-title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--card-title-color);
+}
+
+.card-price {
+  margin-top: 13px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  color: var(--card-title-color);
+}
+
+.btn.btn-selected {
+  display: block;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 14px;
+}
+
+.select-hint {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 6px;
+  color: var(--message-card);
+}
+
+@media screen and (max-width: 768px) {
+  .build-section {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  .products-list {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .product-card {
+    width: 100%;
+  }
+}

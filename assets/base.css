@@ -1,0 +1,99 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gold: gold;
+
+  /* Btn */
+
+  --btn-text-color: #f3fcff;
+  --primery-btn-bg: #001ac2;
+  --acccent-btn-bg: #0d2df8;
+  --disabled-btn: #8c8c8c;
+
+  /* Font */
+
+  --main-font: "Roboto", sans-serif;
+
+  /* Text */
+
+  --title-color: var(--black);
+  --subtitle-color: var(--black);
+
+  /* Background */
+  --hero-bg: #8b9afa;
+  --build-bg: #f3fcff;
+  --product-bg: var(--white);
+  --card-content: #f6f6f6;
+
+  /* Color */
+
+  --accent-border: #272626;
+  --message-card: tomato;
+  --hover-btn: #0d2df8;
+  --product-card-border: #e2e2e2;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+/* button */
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 136px;
+  height: 40px;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 10px;
+  border-color: transparent;
+  color: var(--btn-text-color);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 250ms linear;
+}
+
+.btn.primery,
+.btn.selected {
+  background: var(--primery-btn-bg);
+}
+
+.btn.disabled {
+  background: var(--disabled-btn);
+}
+
+.btn.primery:hover,
+.btn.primery:focus {
+  background: var(--hover-btn);
+}

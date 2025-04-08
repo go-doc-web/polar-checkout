@@ -1,0 +1,95 @@
+{{ 'build.css' | asset_url | stylesheet_tag }}
+
+<section id="build">
+  <ul class="list">
+    {% for block in section.blocks %}
+      <li class="build-section" style="background: {{ block.settings.background }};">
+        <div class="build-container">
+          <h2 class="build-title">{{ block.settings.title }}</h2>
+          <p class="build-subtitle">{{ block.settings.subtitle }}</p>
+
+          {% if block.settings.product_list != blank %}
+            <ul class="products-list list">
+              {% comment %} {% for product in block.settings.product_list %} {% endcomment %}
+              {% assign sorted_products = block.settings.product_list | sort: 'price' %}
+              {% for product in sorted_products %}
+                <li class="product-card card">
+                  <div class="thumb">
+                    <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" />
+                  </div>
+                  <div class="card-content">
+                    <h3 class="card-title">{{ product.title }}</h3>
+                    {% comment %} enters fake currency icon {% endcomment %}
+                    {% assign currency_symbol = '$' %}
+                    <p class="card-price">{{ currency_symbol }}{{ product.price | divided_by: 100.0 | round: 2 }}</p>
+                    <button
+                      class="selected-build-btn btn btn-selected primery"
+                      data-product-id="{{ product.id }}"
+                      data-variant-id="{{ product.variants.first.id }}">
+
+                      SELECT
+                    </button>
+                    <p class="select-hint" style="display: none;">*Click again to unselect and choose another</p>
+                  </div>
+
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p>No products selected for this block.</p>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<script>
+  window.quantityBuildSteps = {{ section.blocks.size }};
+</script>
+
+
+{% schema %}
+  {
+    "name": "Build",
+    "settings": [],
+    "blocks": [
+      {
+        "name": "Step",
+        "type": "step",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          }, {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Subtitle"
+          }, {
+            "type": "color_background",
+            "id": "background",
+            "label": "Background",
+            "default": "#ffffff"
+          }, {
+            "type": "product_list",
+            "id": "product_list",
+            "label": "Products",
+            "limit": 3
+          }
+
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Build",
+        "blocks": [
+          {
+            "type": "step"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
